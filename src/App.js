@@ -11,11 +11,17 @@ import {
     NavLink,
 } from "react-router-dom";
 import Sign from "./components/SignPage/sign.jsx";
+import Login from "./components/SignPage/Login.jsx";
+import Names from "./components/SignPage/names.jsx";
+import Loop from "./components/SignPage/Loop.jsx";
 
 const App = () => {
     return (
         <BrowserRouter>
             <Sign isSign={true} />
+            <Login />
+            <Names />
+            <Loop />
             <NavLink>
                 <Link to="/Home">Home</Link>
                 <Link to="/About">About</Link>
