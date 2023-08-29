@@ -10,17 +10,24 @@ import {
     Link,
     NavLink,
 } from "react-router-dom";
+import Sign from "./components/SignPage/sign.jsx";
 
 const App = () => {
     return (
         <BrowserRouter>
+            <Sign isSign={true} />
             <NavLink>
                 <Link to="/Home">Home</Link>
                 <Link to="/About">About</Link>
                 <Link to="/Products">Products</Link>
             </NavLink>
             <Routes>
-                <Route path="/Home" element={<Home />} />
+                <Route
+                    path="/Home"
+                    element={
+                        <Home name="Mohamed Adel" img="images/gitScreen.jpg" />
+                    }
+                />
                 <Route path="/About" element={<About />} />
                 <Route path="/Products" element={<Products />} />
             </Routes>
